@@ -1,17 +1,19 @@
 // ==UserScript==
 // @name         Anime Sync
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  A powerful userscript that automatically tracks and syncs your anime watching progress across various streaming platforms to AniList. Features direct episode detection, smart season handling, and a clean UI for seamless progress updates.
 // @author       github.com/zenjahid
-// @updateURL    https://raw.githubusercontent.com/zenjahid/Anime-Sync/main/anime-sync-userscript.js
-// @downloadURL  https://raw.githubusercontent.com/zenjahid/Anime-Sync/main/anime-sync-userscript.js
+// @updateURL    https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
+// @downloadURL  https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
 // @match        *://*.aniwatchtv.to/watch/*
 // @match        *://*.aniwatchtv.com/watch/*
 // @match        *://*.animepahe.com/play/*
 // @match        *://*.animepahe.org/play/*
 // @match        *://*.animepahe.ru/play/*
 // @match        *://*.anime-pahe.com/play/*
+// @match        *://*.pahe.win/play/*
+// @match        *://*.miruro.tv/watch*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
 // @grant        GM_getValue
@@ -36,10 +38,7 @@
       "anime-pahe.com",
       "pahe.win",
     ],
-    CRUNCHYROLL: ["crunchyroll.com"],
-    FUNIMATION: ["funimation.com"],
-    NETFLIX: ["netflix.com"],
-    HULU: ["hulu.com"],
+    MIRURO: ["miruro.tv"],
   };
 
   // Helper function to check domain
@@ -524,6 +523,28 @@
 
     try {
       switch (domainType) {
+        case "MIRURO": {
+          debug("Detected Miruro");
+          const urlParams = new URLSearchParams(new URL(currentUrl).search);
+          const anilistId = urlParams.get("id");
+          const episodeNumber = urlParams.get("ep");
+
+          if (anilistId && episodeNumber) {
+            debug(
+              `Found AniList ID: ${anilistId} and Episode: ${episodeNumber}`
+            );
+            window.anilistDirectId = anilistId;
+            episode = parseInt(episodeNumber, 10);
+
+            // Get title from page for display purposes
+            title = document.title.replace(/ Episode \d+$/, "").trim();
+            rawTitle = title;
+          } else {
+            debug("Could not find AniList ID or episode number in URL");
+          }
+          break;
+        }
+
         case "ANIWATCHTV": {
           debug("Detected AniWatchTV");
           const urlMatch = currentUrl.match(
