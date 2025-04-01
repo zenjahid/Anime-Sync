@@ -20,6 +20,7 @@ Currently supported streaming platforms (Desktop version only):
 
 - ✅ AnimePahe
 - ✅ AniWatchTV
+- ✅ Miruro.tv
 
 More platforms coming soon!
 
@@ -28,6 +29,7 @@ More platforms coming soon!
 > ⚠️ Desktop browsers only! This script does not work on mobile browsers.
 
 1. Install a userscript manager:
+
    - [Tampermonkey](https://www.tampermonkey.net/) (Recommended)
    - [Greasemonkey](https://www.greasespot.net/)
    - [Violentmonkey](https://violentmonkey.github.io/)
@@ -52,6 +54,7 @@ To connect your AniList account, follow these steps:
 1. Go to [AniList Developer Settings](https://anilist.co/settings/developer)
 2. Click "Create New Client"
 3. Fill in the client details:
+
    - Name: `Anime Sync` (or any name you prefer)
    - Redirect URL: `https://anilist.co/api/v2/oauth/pin`
 
@@ -112,7 +115,6 @@ Contributions are welcome! Feel free to:
 
 ## Author
 
-
 - GitHub: [@zenjahid](https://github.com/zenjahid)
 
 ## License
@@ -127,4 +129,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-If you find this project helpful, please consider giving it a ⭐! 
+If you find this project helpful, please consider giving it a ⭐!
