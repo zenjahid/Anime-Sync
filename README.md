@@ -89,6 +89,8 @@ Note: Your access token is stored locally and is never sent to any server other 
 - [ ] Add MyAnimeList (MAL) support
 - [ ] Add more Website support
 - [ ] Create browser extension version
+- [ ] Add mobile support
+
 
 ## Request Site Support
 
