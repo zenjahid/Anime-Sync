@@ -9,6 +9,7 @@
 // @match        *://*.aniwatchtv.to/watch/*
 // @match        *://*.aniwatchtv.com/watch/*
 // @match        *://*.animepahe.com/play/*
+// @match        *://*.animepahe.si/play/*
 // @match        *://*.animepahe.org/play/*
 // @match        *://*.animepahe.ru/play/*
 // @match        *://*.anime-pahe.com/play/*
