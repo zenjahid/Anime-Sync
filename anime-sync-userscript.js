@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Anime Sync
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  A powerful userscript that automatically tracks and syncs your anime watching progress across various streaming platforms to AniList. Features direct episode detection, smart season handling, and a clean UI for seamless progress updates.
 // @author       github.com/zenjahid
 // @updateURL    https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
