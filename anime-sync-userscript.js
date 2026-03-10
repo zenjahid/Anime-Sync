@@ -6,12 +6,13 @@
 // @author       github.com/zenjahid
 // @updateURL    https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
 // @downloadURL  https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
+// @license      MIT
 // @match        *://*.aniwatchtv.to/watch/*
 // @match        *://*.aniwatchtv.com/watch/*
 // @match        *://*.animepahe.com/play/*
-// @match        *://*.animepahe.si/play/*
 // @match        *://*.animepahe.org/play/*
 // @match        *://*.animepahe.ru/play/*
+// @match        *://*.animepahe.si/play/*
 // @match        *://*.anime-pahe.com/play/*
 // @match        *://*.pahe.win/play/*
 // @match        *://*.miruro.tv/watch*
@@ -26,7 +27,7 @@
   "use strict";
 
   // Debug mode - set to true to see more detailed logs
-  const DEBUG = true;
+  const DEBUG = false;
 
   // Constants
   const ANILIST_API = "https://graphql.anilist.co";
@@ -38,6 +39,8 @@
       "animepahe.ru",
       "anime-pahe.com",
       "pahe.win",
+       "animepahe.si"
+
     ],
     MIRURO: ["miruro.tv"],
   };
