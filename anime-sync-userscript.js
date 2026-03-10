@@ -4,8 +4,6 @@
 // @version      1.2
 // @description  A powerful userscript that automatically tracks and syncs your anime watching progress across various streaming platforms to AniList. Features direct episode detection, smart season handling, and a clean UI for seamless progress updates.
 // @author       github.com/zenjahid
-// @updateURL    https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
-// @downloadURL  https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
 // @license      MIT
 // @match        *://*.aniwatchtv.to/watch/*
 // @match        *://*.aniwatchtv.com/watch/*
@@ -21,6 +19,8 @@
 // @grant        GM_getValue
 // @grant        GM_registerMenuCommand
 // @connect      graphql.anilist.co
+// @updateURL    https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
+// @downloadURL  https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
 // ==/UserScript==
 
 (function () {
