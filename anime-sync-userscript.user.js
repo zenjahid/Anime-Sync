@@ -19,8 +19,8 @@
 // @grant        GM_getValue
 // @grant        GM_registerMenuCommand
 // @connect      graphql.anilist.co
-// @updateURL    https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
-// @downloadURL  https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
+// @updateURL    https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.user.js
+// @downloadURL  https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.user.js
 // ==/UserScript==
 
 (function () {
