@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Anime Sync
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.4
 // @description  A powerful userscript that automatically tracks and syncs your anime watching progress across various streaming platforms to AniList. Features direct episode detection, smart season handling, and a clean UI for seamless progress updates.
 // @author       github.com/zenjahid
 // @license      MIT
@@ -11,6 +11,7 @@
 // @match        *://*.animepahe.org/play/*
 // @match        *://*.animepahe.ru/play/*
 // @match        *://*.animepahe.si/play/*
+// @match        *://*.animepahe.pw/play/*
 // @match        *://*.anime-pahe.com/play/*
 // @match        *://*.pahe.win/play/*
 // @match        *://*.miruro.tv/watch*
@@ -19,8 +20,8 @@
 // @grant        GM_getValue
 // @grant        GM_registerMenuCommand
 // @connect      graphql.anilist.co
-// @updateURL    https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.user.js
-// @downloadURL  https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.user.js
+// @updateURL    https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
+// @downloadURL  https://raw.githubusercontent.com/zenjahid/anime-sync/main/anime-sync-userscript.js
 // ==/UserScript==
 
 (function () {
@@ -39,8 +40,9 @@
       "animepahe.ru",
       "anime-pahe.com",
       "pahe.win",
-       "animepahe.si"
+       "animepahe.si",
 
+"animepahe.pw",
     ],
     MIRURO: ["miruro.tv"],
   };
